@@ -1,3 +1,5 @@
+<?php get_header(); ?>
+
 <main class="container-fluid main">
 
     <!-- di bawah adalah space Dynamic -->
@@ -61,3 +63,5 @@
     </section>
     <!-- di atas adalah space Dynamic -->
 </main>
+
+<?php get_footer(); ?>
