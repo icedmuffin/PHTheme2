@@ -12,70 +12,75 @@
     <meta name="description" content="Blog Site Template">
     <meta name="author" content="https://www.instagram.com/naufal_sunandar/">
     <!-- <link rel="shortcut icon" href="images/logo.png"> -->
-    <title>Hakli template</title>
+    <title><?php wp_title(); ?></title>
 
     <!-- Costom font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
-    <!-- Boostrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
-
+    <!-- hook untuk semua CSS, Bootstrap, js dan Jquery -->
     <?php wp_head(); ?>
-
 </head>
 
 <body>
 
     <!-- tablet and desktop navbar -->
     <section class="kepala">
-        <h2 class="tulisan-kepala">HAKLI Provinsi Papua Barat </h2>
+        <h2 class="tulisan-kepala">HAKLI Provinsi Papua Barat</h2>
     </section>
     <nav class="menubar">
+        <div class="menubar-kanan">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <div class="dropdown">
+                <a href="#">Keprofesian <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <div class="kotak-dropdown">
+                    <section class="kiri">
+                        <h3>Keanggotaaan</h3>
+                        <a href="#">Registrasi Keanggotaan</a>
+                        <a href="#">Daftar Keanggotaan</a>
+                        <a href="#">STR</a>
+                        <h3>Agenda</h3>
+                        <a href="#">Agenda Akan Dilakukan</a>
+                        <a href="#">Agenda Telah Dilakukan</a>
+                        <h3>Dokumen</h3>
+                        <a href="#">Arsip Dokumen</a>
+                    </section>
+                    <section class="kanan">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/unicef.png">
+                    </section>
 
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <div class="dropdown">
-            <a href="#">Keprofesian</a>
-            <div class="kotak-dropdown">
-                <section class="kiri">
-                    <h3>Keanggotaaan</h3>
-                    <a href="#">Registrasi Keanggotaan</a>
-                    <a href="#">Daftar Keanggotaan</a>
-                    <a href="#">STR</a>
-                    <h3>Agenda</h3>
-                    <a href="#">Agenda Akan Dilakukan</a>
-                    <a href="#">Agenda Telah Dilakukan</a>
-                    <h3>Dokumen</h3>
-                    <a href="#">Arsip Dokumen</a>
-                </section>
-                <section class="kanan">
-                    <img src="./images/unicef.png" alt="">
-                </section>
-
+                </div>
             </div>
-        </div>
-        <div class="dropdown">
-            <a href="#">Kemitraan Unicef</a>
-            <div class="kotak-dropdown">
-                <section class="kiri">
-                    <h3>Program</h3>
-                    <a href="#">Imunisasi</a>
-                    <a href="#">Malaria</a>
-                    <a href="#">Wash</a>
-                    <a href="#">Covid-19</a>
-                </section>
-                <section class="kanan">
-                    <img src="./images/unicef.png" alt="">
-                </section>
+            <div class="dropdown">
+                <a href="#">Kemitraan Unicef <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <div class="kotak-dropdown">
+                    <section class="kiri">
+                        <h3>Program</h3>
+                        <a href="#">Imunisasi</a>
+                        <a href="#">Malaria</a>
+                        <a href="#">Wash</a>
+                        <a href="#">Covid-19</a>
+                    </section>
+                    <section class="kanan">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/unicef.png">
+                    </section>
 
+                </div>
             </div>
-        </div>
 
-        <a href="#">berita</a>
-        <a href="#">Contact Us</a>
+            <a href="#">Berita</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="kiri">
+
+        </div>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn cari" type="submit">Search</button>
+        </form>
+
     </nav>
     <!-- mobile navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -103,9 +108,6 @@
                             <li><a class="dropdown-item" href="#">Registrasi Keanggotaan</a></li>
                             <li><a class="dropdown-item" href="#">Daftar Keanggotaan</a></li>
                             <li><a class="dropdown-item" href="#">STR</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
                             <li>
                                 <h3>Agenda</h3>
                             </li>
@@ -138,7 +140,7 @@
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn cari" type="submit">Search</button>
                 </form>
             </div>
         </div>
