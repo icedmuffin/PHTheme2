@@ -10,37 +10,50 @@
         </h2>
 
         <div class="berita-space">
-            <?php query_posts('posts_per_page=5'); ?>
-            <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
 
-                    <div class="berita-kotak">
-                        <div class="berita-gambar">
-                            <img src="<?php echo catch_that_image() ?>">
-                        </div>
-                        <div class="berita-tulisan">
-                            <section class="berita-judul">
-                                <h3><?php the_title(); ?></h3>
-                            </section>
-                            <section class="berita-paragraf">
-                                <?php
-                                $content = get_the_content();
-                                $content = preg_replace("/<img[^>]+\>/i", " ", $content);
-                                $content = apply_filters('the_content', $content);
-                                $content = str_replace(']]>', ']]>', $content);
-                                echo  substr($content, 0, 250);
-                                ?>
-                            </section>
-                            <section><a href="<?php echo get_permalink(); ?>">read more</a></section>
-                        </div>
-                    </div>
-
-                <?php endwhile; ?>
-            <?php endif; ?>
-            <?php wp_reset_query(); ?>
-
-
-
+            <div class="berita-kotak">
+                <div class="berita-gambar">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/unicef.png">
+                </div>
+                <div class="berita-tulisan">
+                    <section class="berita-judul">
+                        <h3>Papua PON 2021</h3>
+                    </section>
+                    <section class="berita-paragraf">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui modi nihil ratione tenetur sit
+                        deserunt quos molestias officia. Voluptatibus libero reiciendis deserunt maxime at laborum.
+                        Cum porro explicabo veniam quod.
+                    </section>
+                </div>
+            </div>
+            <div class="berita-kotak">
+                <div class="berita-gambar">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/unicef.png">
+                </div>
+                <div class="berita-tulisan">
+                    <section class="berita-judul">
+                        <h3>Papua PON 2021</h3>
+                    </section>
+                    <section class="berita-paragraf">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dolor rerum vel Illum
+                        consequuntur a, quod repellat iure eos ex.
+                    </section>
+                </div>
+            </div>
+            <div class="berita-kotak">
+                <div class="berita-gambar">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/unicef.png">
+                </div>
+                <div class="berita-tulisan">
+                    <section class="berita-judul">
+                        <h3>Papua PON 2021</h3>
+                    </section>
+                    <section class="berita-paragraf">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dolor rerum vel Illum
+                        consequuntur a, quod repellat iure eos ex.
+                    </section>
+                </div>
+            </div>
 
 
         </div>
@@ -48,10 +61,6 @@
 
     <!-- di atas adalah space Dynamic -->
     <section class="container-fluid unicef">
-
-
-
-        </div><!-- #content -->
         <h2>
             KEMITRAAN UNICEF
         </h2>
